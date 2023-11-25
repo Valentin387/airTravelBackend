@@ -22,7 +22,7 @@ import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @RestController
 @RequestMapping("/api/financial-module")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("https://air-travel-frontend-5f0ebcf08ae2.herokuapp.com")
 @RequiredArgsConstructor
 @Transactional
 public class FinancialModuleController {

@@ -13,7 +13,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**") // Allow CORS for all paths
-                .allowedOrigins("http://localhost:5173") // Specify the origin you want to allow
+                .allowedOrigins("https://air-travel-frontend-5f0ebcf08ae2.herokuapp.com") // Specify the origin you want to allow
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Specify the HTTP methods you want to allow
                 .allowedHeaders("*") // Allow all headers
                 .exposedHeaders("Authorization") // Expose any custom headers you need

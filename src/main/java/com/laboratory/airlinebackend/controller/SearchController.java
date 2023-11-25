@@ -13,7 +13,7 @@ import java.util.Date;
 
 @RestController
 @RequestMapping("/api/search")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("https://air-travel-frontend-5f0ebcf08ae2.herokuapp.com")
 @RequiredArgsConstructor
 public class SearchController {
 

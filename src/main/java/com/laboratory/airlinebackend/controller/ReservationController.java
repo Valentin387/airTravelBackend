@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/reservation")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin("https://air-travel-frontend-5f0ebcf08ae2.herokuapp.com")
 @RequiredArgsConstructor
 public class ReservationController {
 
