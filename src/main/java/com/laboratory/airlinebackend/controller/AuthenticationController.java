@@ -112,7 +112,7 @@ public class AuthenticationController {
     public ResponseEntity<?> emailChecking(@PathVariable String userEmail){
         String emailWithHyphens = userEmail.replace(".", "-");
         String encodedEmail = UriUtils.encode(emailWithHyphens, "UTF-8");
-        String recoveryLink = "http://localhost:5173/ResetPassword/" + encodedEmail;
+        String recoveryLink = "https://air-travel-frontend-5f0ebcf08ae2.herokuapp.com/ResetPassword/" + encodedEmail;
 
         String body = "Estimado/a usuario/a,\n" +
                 "\n" +
