@@ -43,7 +43,12 @@ public interface ShoppingCartSeatsRepository extends JpaRepository<ShoppingCartS
             "WHERE scs.shoppingCartID = :ShoppingCartId AND s.flightId = :flightId")
     List<Passenger> getPassengersByShoppingCartIdAndFlightId(@Param("ShoppingCartId") long ShoppingCartId, @Param("flightId") long flightId);
 
+
+    @Query("SELECT s FROM tblShoppingCartSeats s WHERE s.seatID = :seatID")
     Optional <ShoppingCartSeats> findBySeatID(long seatID);
+
+    @Query("SELECT s FROM tblShoppingCartSeats s WHERE s.seatID = :seatID AND s.shoppingCartID = :shoppingCartID ")
+    Optional <ShoppingCartSeats> findBySeatIDandShoppingCartID(long seatID, long shoppingCartID);
 
     @Query("SELECT s FROM tblShoppingCartSeats s WHERE s.shoppingCartID = :shoppingCartId")
     List<ShoppingCartSeats> getShoppingCartSeatsByShoppingCartId(@Param("shoppingCartId") long shoppingCartId);
