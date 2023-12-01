@@ -57,7 +57,7 @@ public class DropShoppingCartItemService {
 
         //delete the shopping cart seats
         for (Seat seat : seats) {
-            Optional<ShoppingCartSeats> OptionalShoppingCartSeats = shoppingCartSeatsRepository.findBySeatID(seat.getID());
+            Optional<ShoppingCartSeats> OptionalShoppingCartSeats = shoppingCartSeatsRepository.findBySeatIDandShoppingCartID(seat.getID(), shoppingCart.getID());
             if (OptionalShoppingCartSeats.isEmpty()) {
                 return ResponseEntity.badRequest().body("Shopping cart seats not found");
             }
