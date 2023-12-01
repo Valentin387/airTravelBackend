@@ -176,7 +176,7 @@ public class CheckInController {
             ConsultCheckInDTO passengerBookingDetails = passengersBookingDetailsDTO.get(0);
 
             //send this object to the emailSenderService
-            byte[] pdfBytes = pdfGenerationService.generatePdf(passengerBookingDetails.toString());
+            byte[] pdfBytes = pdfGenerationService.generatePdf(passengerBookingDetails);
 
             emailSenderService.sendEmailWithAttachment(passenger.getEmail(),"BOARDING PASS", "Check the attached PDF. " +
                     "Thanks for choosing AirTravel", "BoardingPass.pdf", pdfBytes);
